@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#8A3324">
+<meta name="description" content="Casita Mexicana — authentische mexikanische Küche im Severinsviertel, Köln-Südstadt. Tacos, Nachos, Quesadillas und Margaritas. Jetzt reservieren.">
+<title>Casita Mexicana — Mexikanisch in der Kölner Südstadt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ground:#F4EDDF; --ink:#2A211C; --soft:#6b5b50; --accent:#8A3324; --deep:#6B2519; --gold:#A9812F;
+    --line:#d8cbb6;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--ground);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  a{text-decoration:none;color:inherit}
+  .display{font-family:'Cormorant Garamond',serif}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:15px 30px;font-size:14px;font-weight:600;transition:transform .2s ease,opacity .2s ease}
+  .btn:hover{transform:translateY(-1px)}
+  .btn-solid{background:var(--accent);color:var(--ground)}
+  .btn-ghost{border:1px solid rgba(42,33,28,.28);color:var(--ink)}
+  .btn-onhero{background:var(--ground);color:var(--deep)}
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+  .kicker{font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--accent)}
+
+  /* ---------- header ---------- */
+  header{position:absolute;top:0;left:0;right:0;z-index:20}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+  .brand{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:26px;color:#fff;letter-spacing:.3px;text-shadow:0 2px 18px rgba(0,0,0,.35)}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 55%}
+  .hero-bg::after{content:'';position:absolute;inset:0;background:
+     linear-gradient(180deg,rgba(20,12,8,.55) 0%,rgba(20,12,8,.15) 22%,rgba(20,12,8,.30) 62%,rgba(20,12,8,.82) 100%)}
+  .hero-inner{position:relative;z-index:10;padding:0 0 40px}
+  .hero .kicker{color:#f3d9c9}
+  .hero h1{font-family:'Cormorant Garamond',serif;font-weight:700;color:#fff;font-size:clamp(52px,9vw,104px);line-height:.96;letter-spacing:-.5px;margin-top:16px;text-shadow:0 3px 30px rgba(0,0,0,.4)}
+  .hero h1 em{font-style:italic;color:#F0C24B}
+  .hero .lede{margin-top:22px;max-width:520px;color:rgba(255,255,255,.9);font-size:clamp(15px,2vw,18px);line-height:1.6;text-shadow:0 1px 14px rgba(0,0,0,.4)}
+  .hero .cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero .meta{margin-top:30px;font-size:13px;color:rgba(255,255,255,.78);font-weight:500;letter-spacing:.02em}
+
+  /* ---------- intro ---------- */
+  .intro{padding:96px 0}
+  .intro .grid{display:grid;grid-template-columns:1fr;gap:28px}
+  .intro h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4.4vw,46px);line-height:1.08;letter-spacing:-.01em;max-width:16ch}
+  .intro h2 span{color:var(--accent)}
+  .intro p{color:var(--soft);font-size:16px;line-height:1.7;max-width:56ch}
+  .rule{width:60px;height:2px;background:var(--gold);border-radius:2px;margin:6px 0 2px}
+  @media(min-width:820px){ .intro .grid{grid-template-columns:1.05fr 1fr;align-items:center;gap:60px} }
+
+  /* ---------- dishes ---------- */
+  .dishes{padding:12px 0 40px}
+  .dishes .head{max-width:640px}
+  .dishes h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4.6vw,50px);letter-spacing:-.01em;margin-top:10px}
+  .cards{margin-top:46px;display:grid;grid-template-columns:1fr;gap:20px}
+  @media(min-width:720px){ .cards{grid-template-columns:repeat(3,1fr)} }
+  .card{position:relative;height:420px;border-radius:22px;overflow:hidden;box-shadow:0 20px 50px -28px rgba(0,0,0,.5)}
+  .card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s ease}
+  .card:hover img{transform:scale(1.06)}
+  .card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,12,8,.05) 0%,transparent 32%,rgba(20,12,8,.35) 60%,rgba(20,12,8,.86) 100%)}
+  .card .txt{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:24px}
+  .card .txt h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27px;color:#fff}
+  .card .txt p{margin-top:6px;font-size:13.5px;line-height:1.5;color:rgba(255,255,255,.82)}
+  .card .price{position:absolute;top:16px;right:16px;z-index:2;background:var(--ground);color:var(--deep);font-weight:600;font-size:14px;border-radius:999px;padding:7px 13px}
+
+  /* ---------- statement ---------- */
+  .statement{padding:110px 0}
+  .statement p{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:clamp(26px,4.6vw,46px);line-height:1.24;letter-spacing:-.01em;text-align:center;max-width:20ch;margin:0 auto}
+  .statement p span{color:var(--accent)}
+
+  /* ---------- reserve ---------- */
+  .reserve{padding:0 0 96px}
+  .reserve .box{background:var(--accent);color:var(--ground);border-radius:28px;padding:64px 40px;text-align:center}
+  .reserve h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(32px,5vw,58px);line-height:1.02}
+  .reserve .sub{margin:16px auto 0;max-width:440px;color:rgba(244,237,223,.86);font-size:15.5px;line-height:1.6}
+  .reserve .phone{margin-top:30px}
+  .reserve .phone .btn{font-size:15px;padding:16px 34px}
+  .info{margin-top:40px;display:grid;grid-template-columns:1fr;gap:22px;text-align:left;max-width:760px;margin-left:auto;margin-right:auto}
+  @media(min-width:720px){ .info{grid-template-columns:repeat(3,1fr)} }
+  .info .col .l{font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:rgba(244,237,223,.7)}
+  .info .col .v{margin-top:8px;font-size:14.5px;line-height:1.65;color:var(--ground)}
+  .info .col .v a{border-bottom:1px solid rgba(244,237,223,.4)}
+
+  /* ---------- footer ---------- */
+  footer{padding:30px 0 44px;border-top:1px solid var(--line)}
+  .foot{display:flex;flex-direction:column;gap:8px;align-items:flex-start;justify-content:space-between}
+  .foot .b{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:20px;color:var(--accent)}
+  .foot .r{font-size:12.5px;color:var(--soft)}
+  @media(min-width:720px){ .foot{flex-direction:row;align-items:center} }
+</style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"><img src="hero.png" alt="Mexikanische Gerichte im Casita Mexicana"></div>
+    <header>
+      <div class="wrap nav">
+        <div class="brand">Casita Mexicana</div>
+        <a href="tel:+4922195936466" class="btn btn-onhero">Reservieren</a>
+      </div>
+    </header>
+    <div class="wrap hero-inner">
+      <p class="kicker reveal">Cocina Mexicana · Köln-Südstadt</p>
+      <h1 class="reveal">México, mitten<br>in der <em>Südstadt.</em></h1>
+      <p class="lede reveal">Authentische mexikanische Küche im Herzen des Severinsviertels — Tacos, Nachos und Quesadillas, frisch zubereitet, dazu eiskalte Margaritas. Einfach vorbeikommen oder einen Tisch reservieren.</p>
+      <div class="cta reveal">
+        <a href="tel:+4922195936466" class="btn btn-solid">Tisch reservieren</a>
+        <a href="#dishes" class="btn btn-onhero">Speisekarte ansehen</a>
+      </div>
+      <p class="meta reveal">Severinstraße 10–12 · 50678 Köln · Reservierung: 0221 95936466</p>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="wrap grid">
+      <div class="reveal">
+        <p class="kicker">Willkommen</p>
+        <h2>Ein Stück <span>México</span> im Severinsviertel.</h2>
+      </div>
+      <div class="reveal">
+        <div class="rule"></div>
+        <p>Bei Casita Mexicana dreht sich alles um ehrliche, authentische mexikanische Küche — so, wie man sie auch in México kennt. Weiche Maistortillas, langsam geschmortes Cochinita Pibil, knusprige Nachos mit hausgemachten Salsas und Quesadillas mit geschmolzenem Käse. Dazu Margaritas, Corona und Agua de Jamaica. Mitten in der Kölner Südstadt, an der Severinstraße — entspannt, herzlich und immer einen Besuch wert.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISHES -->
+  <section class="dishes" id="dishes">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="kicker">Aus unserer Küche</p>
+        <h2>Was bei uns auf den Tisch kommt.</h2>
+      </div>
+      <div class="cards">
+        <a href="tel:+4922195936466" class="card reveal">
+          <img src="tacos.png" alt="Tacos Cochinita Pibil">
+          <span class="price">ab €12,9</span>
+          <div class="txt">
+            <h3>Tacos</h3>
+            <p>Doppelte weiche Maistortillas, Füllung nach Wahl — Cochinita Pibil, Pastor, Picadillo oder Vegetariano — mit Zwiebeln, Koriander und Salsa Verde.</p>
+          </div>
+        </a>
+        <a href="tel:+4922195936466" class="card reveal">
+          <img src="nachos.png" alt="Nachos Original">
+          <span class="price">ab €18,5</span>
+          <div class="txt">
+            <h3>Nachos</h3>
+            <p>Knusprige Maistortilla-Chips mit Bohnen und Käsesoße überbacken, Salsa Verde, frischer Pico de Gallo und Jalapeños.</p>
+          </div>
+        </a>
+        <a href="tel:+4922195936466" class="card reveal">
+          <img src="quesadilla.png" alt="Quesadillas">
+          <span class="price">€16,9</span>
+          <div class="txt">
+            <h3>Quesadillas</h3>
+            <p>Weizentortillas mit gegrilltem Cheddar-Mozzarella, Füllung nach Wahl, frischer Pico de Gallo und Salsa Verde.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATEMENT -->
+  <section class="statement">
+    <div class="wrap">
+      <p class="reveal">„Gutes mexikanisches Essen schmeckt nach <span>Zuhause</span> — frisch, ehrlich und mit Herz gemacht.”</p>
+    </div>
+  </section>
+
+  <!-- RESERVE -->
+  <section class="reserve">
+    <div class="wrap">
+      <div class="box reveal">
+        <h2>Reservier deinen Tisch.</h2>
+        <p class="sub">Reservierungen nehmen wir am liebsten telefonisch entgegen — ruf einfach an, wir freuen uns auf dich.</p>
+        <div class="phone">
+          <a href="tel:+4922195936466" class="btn btn-onhero">Anrufen · 0221 95936466</a>
+        </div>
+        <div class="info">
+          <div class="col">
+            <div class="l">Adresse</div>
+            <div class="v">Severinstraße 10–12<br>50678 Köln-Südstadt</div>
+          </div>
+          <div class="col">
+            <div class="l">Öffnungszeiten</div>
+            <div class="v">Mo–Do 12:00–23:00<br>Fr 12:00–00:00<br>Sa 13:00–00:00 · So 13:00–23:00</div>
+          </div>
+          <div class="col">
+            <div class="l">Reservierung</div>
+            <div class="v"><a href="tel:+4922195936466">0221 95936466</a><br>Tischreservierung telefonisch</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap foot">
+      <span class="b">Casita Mexicana</span>
+      <span class="r">Mexikanisch · Severinstraße 10–12 · 50678 Köln-Südstadt · 0221 95936466</span>
+    </div>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver((es)=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.14});
+    document.querySelectorAll('.reveal').forEach((el,i)=>{ el.style.transitionDelay=(Math.min(i,4)*70)+'ms'; io.observe(el); });
+  </script>
+</body>
+</html>
