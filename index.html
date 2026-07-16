@@ -72,6 +72,25 @@
   .card .txt p{margin-top:6px;font-size:13.5px;line-height:1.5;color:rgba(255,255,255,.82)}
   .card .price{position:absolute;top:16px;right:16px;z-index:2;background:var(--ground);color:var(--deep);font-weight:600;font-size:14px;border-radius:999px;padding:7px 13px}
 
+  /* ---------- menu ---------- */
+  .menu{padding:70px 0 20px}
+  .menu .mhead{max-width:640px;margin-bottom:44px}
+  .menu h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4.6vw,50px);letter-spacing:-.01em;margin-top:10px}
+  .menu .cols{display:grid;grid-template-columns:1fr;gap:20px 64px}
+  @media(min-width:820px){ .menu .cols{grid-template-columns:1fr 1fr} }
+  .mgroup{margin-bottom:30px}
+  .mgroup h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:24px;text-transform:uppercase;letter-spacing:.04em;color:var(--accent);display:flex;align-items:center;gap:14px}
+  .mgroup h3::after{content:'';flex:1;height:1px;background:var(--line)}
+  .mrow{display:flex;align-items:baseline;gap:10px;margin-top:16px}
+  .mrow .n{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:20px;white-space:nowrap}
+  .mrow .d{flex:1;border-bottom:1.5px dotted #c9b89e;transform:translateY(-4px)}
+  .mrow .p{font-weight:600;font-size:15px;color:var(--accent);white-space:nowrap}
+  .mdesc{font-size:13.5px;line-height:1.5;color:var(--soft);margin-top:4px;max-width:92%}
+  .mribbon{grid-column:1/-1;background:var(--accent);color:var(--ground);border-radius:16px;padding:20px 26px;text-align:center;margin:6px 0 10px}
+  .mribbon .t{font-size:11px;letter-spacing:.28em;text-transform:uppercase;opacity:.85;font-weight:600}
+  .mribbon .v{font-family:'Cormorant Garamond',serif;font-size:22px;margin-top:6px}
+  .mnote{font-size:12.5px;color:var(--soft);margin-top:8px}
+
   /* ---------- statement ---------- */
   .statement{padding:110px 0}
   .statement p{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:clamp(26px,4.6vw,46px);line-height:1.24;letter-spacing:-.01em;text-align:center;max-width:20ch;margin:0 auto}
@@ -115,7 +134,7 @@
       <p class="lede reveal">Authentische mexikanische Küche im Herzen des Severinsviertels — Tacos, Nachos und Quesadillas, frisch zubereitet, dazu eiskalte Margaritas. Einfach vorbeikommen oder einen Tisch reservieren.</p>
       <div class="cta reveal">
         <a href="tel:+4922195936466" class="btn btn-solid">Tisch reservieren</a>
-        <a href="#dishes" class="btn btn-onhero">Speisekarte ansehen</a>
+        <a href="#menu" class="btn btn-onhero">Speisekarte ansehen</a>
       </div>
       <p class="meta reveal">Severinstraße 10–12 · 50678 Köln · Reservierung: 0221 95936466</p>
     </div>
@@ -143,7 +162,7 @@
         <h2>Was bei uns auf den Tisch kommt.</h2>
       </div>
       <div class="cards">
-        <a href="tel:+4922195936466" class="card reveal">
+        <a href="#menu" class="card reveal">
           <img src="tacos.png" alt="Tacos Cochinita Pibil">
           <span class="price">ab €12,9</span>
           <div class="txt">
@@ -151,7 +170,7 @@
             <p>Doppelte weiche Maistortillas, Füllung nach Wahl — Cochinita Pibil, Pastor, Picadillo oder Vegetariano — mit Zwiebeln, Koriander und Salsa Verde.</p>
           </div>
         </a>
-        <a href="tel:+4922195936466" class="card reveal">
+        <a href="#menu" class="card reveal">
           <img src="nachos.png" alt="Nachos Original">
           <span class="price">ab €18,5</span>
           <div class="txt">
@@ -159,7 +178,7 @@
             <p>Knusprige Maistortilla-Chips mit Bohnen und Käsesoße überbacken, Salsa Verde, frischer Pico de Gallo und Jalapeños.</p>
           </div>
         </a>
-        <a href="tel:+4922195936466" class="card reveal">
+        <a href="#menu" class="card reveal">
           <img src="quesadilla.png" alt="Quesadillas">
           <span class="price">€16,9</span>
           <div class="txt">
@@ -168,6 +187,57 @@
           </div>
         </a>
       </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <div class="mhead reveal">
+        <p class="kicker">Speisekarte</p>
+        <h2>Unsere Karte.</h2>
+      </div>
+      <div class="cols">
+        <div>
+          <div class="mgroup reveal">
+            <h3>Nachos</h3>
+            <div class="mrow"><span class="n">Original</span><span class="d"></span><span class="p">€18,5</span></div>
+            <div class="mdesc">Knusprige Maistortilla-Chips mit Bohnen und Käsesoße überbacken, Salsa Verde, frischer Pico de Gallo und Jalapeños.</div>
+            <div class="mrow"><span class="n">Tres Quesos</span><span class="d"></span><span class="p">€21,0</span></div>
+            <div class="mdesc">Wie Original, plus Cheddar und Mozzarella — dreifach überbacken.</div>
+            <div class="mrow"><span class="n">Especial</span><span class="d"></span><span class="p">€23,9</span></div>
+            <div class="mdesc">Tres Quesos mit einer Füllung deiner Wahl.</div>
+          </div>
+          <div class="mgroup reveal">
+            <h3>Quesadillas</h3>
+            <div class="mrow"><span class="n">Quesadillas · zwei Stück</span><span class="d"></span><span class="p">€16,9</span></div>
+            <div class="mdesc">Ø 20 cm Weizentortillas mit gegrilltem Cheddar-Mozzarella, einer Füllung nach Wahl, frischer Pico de Gallo und Salsa Verde.</div>
+          </div>
+        </div>
+        <div>
+          <div class="mgroup reveal">
+            <h3>Tacos</h3>
+            <div class="mrow"><span class="n">Tacos · vier Stück</span><span class="d"></span><span class="p">€12,9</span></div>
+            <div class="mdesc">Doppelte weiche Maistortillas mit einer Füllung nach Wahl, frischen Zwiebeln, Koriander und Salsa Verde.</div>
+            <div class="mrow"><span class="n">Mit zwei Füllungen</span><span class="d"></span><span class="p">€13,9</span></div>
+            <div class="mdesc">Cheese it up — gegrillter Cheddar-Mozzarella · + €3,5</div>
+          </div>
+          <div class="mgroup reveal">
+            <h3>Bebidas</h3>
+            <div class="mrow"><span class="n">Agua de Jamaica</span><span class="d"></span><span class="p">€3,5</span></div>
+            <div class="mrow"><span class="n">Gaffel Kölsch 0,4</span><span class="d"></span><span class="p">€4,5</span></div>
+            <div class="mrow"><span class="n">Corona</span><span class="d"></span><span class="p">€4,9</span></div>
+            <div class="mrow"><span class="n">Margarita</span><span class="d"></span><span class="p">€8,9</span></div>
+            <div class="mrow"><span class="n">Café / Espresso</span><span class="d"></span><span class="p">€2,6</span></div>
+            <div class="mrow"><span class="n">Prosecco 0,7</span><span class="d"></span><span class="p">€29</span></div>
+          </div>
+        </div>
+        <div class="mribbon reveal">
+          <div class="t">Rellenos · Wähle deine Füllung</div>
+          <div class="v">Cochinita Pibil · Pastor +€1 · Picadillo · Vegetariano</div>
+        </div>
+      </div>
+      <p class="mnote reveal">Auszug aus unserer Karte. Alle Preise in Euro.</p>
     </div>
   </section>
 
