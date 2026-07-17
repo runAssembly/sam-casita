@@ -6,6 +6,22 @@
 <meta name="theme-color" content="#8A3324">
 <meta name="description" content="Casita Mexicana — authentische mexikanische Küche im Severinsviertel, Köln-Südstadt. Tacos, Burritos, Quesadillas, Nachos & Margaritas. Jetzt Tisch reservieren.">
 <title>Casita Mexicana — Mexikanisch in der Kölner Südstadt</title>
+<link rel="icon" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<!-- share preview (Open Graph / Twitter) -->
+<meta property="og:type" content="restaurant">
+<meta property="og:site_name" content="Casita Mexicana Südstadt">
+<meta property="og:title" content="Casita Mexicana — Mexikanisch in der Kölner Südstadt">
+<meta property="og:description" content="Authentische mexikanische Küche im Severinsviertel: Street Tacos, Burritos, Quesadillas, Nachos & handgemachte Margaritas. Jetzt Tisch reservieren.">
+<meta property="og:image" content="https://runassembly.github.io/sam-casita/og.jpg">
+<meta property="og:image:width" content="1210">
+<meta property="og:image:height" content="1037">
+<meta property="og:url" content="https://runassembly.github.io/sam-casita/">
+<meta property="og:locale" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Casita Mexicana — Mexikanisch in der Kölner Südstadt">
+<meta name="twitter:description" content="Authentische mexikanische Küche im Severinsviertel: Street Tacos, Burritos, Quesadillas, Nachos & handgemachte Margaritas.">
+<meta name="twitter:image" content="https://runassembly.github.io/sam-casita/og.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -32,7 +48,8 @@
   /* ---------- header ---------- */
   header{position:absolute;top:0;left:0;right:0;z-index:20}
   .nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
-  .brand{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:26px;color:#fff;letter-spacing:.3px;text-shadow:0 2px 18px rgba(0,0,0,.35)}
+  .brand{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:26px;color:#fff;letter-spacing:.3px;text-shadow:0 2px 18px rgba(0,0,0,.35);display:flex;align-items:center;gap:12px}
+  .brand-logo{height:42px;width:auto;filter:drop-shadow(0 2px 10px rgba(0,0,0,.4))}
 
   /* ---------- hero ---------- */
   .hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden}
@@ -120,6 +137,35 @@
   .foot .r{font-size:12.5px;color:var(--soft)}
   @media(min-width:720px){ .foot{flex-direction:row;align-items:center} }
 
+  /* ---------- reviews ---------- */
+  .reviews{padding:96px 0 20px}
+  .reviews .rhead{display:flex;flex-direction:column;gap:14px;align-items:flex-start;margin-bottom:44px}
+  .reviews h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4.6vw,50px);letter-spacing:-.01em}
+  .rating{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .rating .score{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:40px;color:var(--accent);line-height:1}
+  .rating .stars{color:var(--gold);font-size:19px;letter-spacing:2px}
+  .rating .src{font-size:13px;color:var(--soft)}
+  .rgrid{display:grid;grid-template-columns:1fr;gap:20px}
+  @media(min-width:720px){ .rgrid{grid-template-columns:repeat(2,1fr)} }
+  .rcard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px 26px 24px;box-shadow:0 14px 40px -30px rgba(0,0,0,.4)}
+  .rcard .qstars{color:var(--gold);font-size:15px;letter-spacing:2px}
+  .rcard p{margin-top:12px;font-size:15.5px;line-height:1.62;color:var(--ink)}
+  .rcard .who{margin-top:16px;display:flex;align-items:center;gap:11px}
+  .rcard .av{width:38px;height:38px;border-radius:50%;background:var(--accent);color:var(--ground);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:17px}
+  .rcard .nm{font-weight:600;font-size:14.5px}
+  .rcard .via{font-size:12px;color:var(--soft)}
+
+  /* ---------- interior band ---------- */
+  .ambiance{padding:70px 0 20px}
+  .ambiance .band{position:relative;border-radius:28px;overflow:hidden;min-height:440px;display:flex;align-items:flex-end}
+  .ambiance .band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .ambiance .band::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,12,8,.15) 0%,transparent 30%,rgba(20,12,8,.35) 62%,rgba(20,12,8,.88) 100%)}
+  .ambiance .cap{position:relative;z-index:2;padding:38px 34px;color:#fff;max-width:560px}
+  .ambiance .cap .kicker{color:#f3d9c9}
+  .ambiance .cap h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(26px,3.6vw,38px);margin-top:8px;line-height:1.06}
+  .ambiance .cap p{margin-top:10px;font-size:15px;line-height:1.6;color:rgba(255,255,255,.9);max-width:44ch}
+  .foot-logo{height:34px;width:auto;margin-bottom:8px}
+
   /* ---------- reservation modal ---------- */
   .modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
   .modal.open{display:flex}
@@ -150,7 +196,7 @@
     <div class="hero-bg"><img src="hero.png" alt="Mexikanische Gerichte im Casita Mexicana"></div>
     <header>
       <div class="wrap nav">
-        <div class="brand">Casita Mexicana</div>
+        <div class="brand"><img src="logo.png" alt="Casita Mexicana Logo" class="brand-logo">Casita Mexicana</div>
         <button class="btn btn-onhero" data-reserve>Reservieren</button>
       </div>
     </header>
@@ -175,7 +221,7 @@
       </div>
       <div class="reveal">
         <div class="rule"></div>
-        <p>Bei Casita Mexicana dreht sich alles um ehrliche, authentische mexikanische Küche — so, wie man sie auch in México kennt. Weiche Maistortillas, butterzarte Birria, langsam geschmortes Cochinita Pibil, knusprige Nachos mit hausgemachten Salsas und Quesadillas mit geschmolzenem Käse. Dazu Margaritas mit frisch gepresstem Zitronensaft, Mezcalitas, Corona und Agua de Jamaica. Mitten in der Kölner Südstadt, an der Severinstraße — entspannt, herzlich und immer einen Besuch wert.</p>
+        <p>Angefangen hat alles mit drei Brüdern aus Guadalajara, die authentisches mexikanisches Street Food nach Deutschland gebracht haben. Heute steht Casita Mexicana an mehreren Standorten in Köln für ehrliche mexikanische Küche — so, wie man sie auch in México kennt. Weiche Maistortillas, butterzarte Birria, langsam geschmortes Cochinita Pibil, knusprige Nachos mit hausgemachten Salsas und Quesadillas mit geschmolzenem Käse. Dazu Margaritas mit frisch gepresstem Zitronensaft, Mezcalitas, Corona und Agua de Jamaica. Mitten in der Kölner Südstadt, an der Severinstraße — entspannt, herzlich und immer einen Besuch wert.</p>
       </div>
     </div>
   </section>
@@ -189,7 +235,7 @@
       </div>
       <div class="cards">
         <a href="#menu" class="card reveal">
-          <img src="tacos.png" alt="Street Tacos mit Füllung nach Wahl">
+          <img src="food-real.jpg" alt="Street Tacos und Quesadilla im Casita Mexicana">
           <span class="price">ab €15,9</span>
           <div class="txt">
             <h3>Street Tacos</h3>
@@ -411,6 +457,57 @@
     </div>
   </section>
 
+  <!-- REVIEWS -->
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <div class="rhead reveal">
+        <p class="kicker">Was Gäste sagen</p>
+        <h2>Von Gästen geliebt.</h2>
+        <div class="rating">
+          <span class="score">4,5</span>
+          <span class="stars">★★★★★</span>
+          <span class="src">Durchschnitt auf Google · authentische mexikanische Küche im Herzen der Südstadt</span>
+        </div>
+      </div>
+      <div class="rgrid">
+        <div class="rcard reveal">
+          <div class="qstars">★★★★★</div>
+          <p>„The staff were incredibly kind, and the food was outstanding — honestly one of the best Mexican places I've ever tried, if not the best.”</p>
+          <div class="who"><div class="av">S</div><div><div class="nm">Stella P.</div><div class="via">Google Rezension</div></div></div>
+        </div>
+        <div class="rcard reveal">
+          <div class="qstars">★★★★☆</div>
+          <p>„The food was quite good and pretty authentic. The salsas are made in house and fresh and delicious.”</p>
+          <div class="who"><div class="av">A</div><div><div class="nm">Alexandra K.</div><div class="via">Google Rezension</div></div></div>
+        </div>
+        <div class="rcard reveal">
+          <div class="qstars">★★★★☆</div>
+          <p>„Had the mixed street tacos — super delicious, all four kinds we tried. The agua de jamaica was amazing too!”</p>
+          <div class="who"><div class="av">E</div><div><div class="nm">Eszter N.</div><div class="via">Google Rezension</div></div></div>
+        </div>
+        <div class="rcard reveal">
+          <div class="qstars">★★★★★</div>
+          <p>„Good quality, genuine Mexican food, wide variety of food. Friendly service and nice decoration.”</p>
+          <div class="who"><div class="av">T</div><div><div class="nm">Tamas A.</div><div class="via">Google Rezension</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AMBIANCE (real interior) -->
+  <section class="ambiance">
+    <div class="wrap">
+      <div class="band reveal">
+        <img src="interior-real.jpg" alt="Innenraum und Bar im Casita Mexicana, Köln-Südstadt">
+        <div class="cap">
+          <p class="kicker">Unser Lokal</p>
+          <h3>Warm, lebendig, mittendrin.</h3>
+          <p>Rustikales Holz, eine gut bestückte Tequila- &amp; Mezcal-Bar und die entspannte Atmosphäre der Südstadt — komm vorbei, bleib länger.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- STATEMENT -->
   <section class="statement">
     <div class="wrap">
@@ -449,7 +546,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="wrap foot">
-      <span class="b">Casita Mexicana</span>
+      <span class="b"><img src="logo.png" alt="" class="foot-logo"><br>Casita Mexicana</span>
       <span class="r">Mexikanisch · Severinstraße 10–12 · 50678 Köln-Südstadt · 0221 95936466</span>
     </div>
   </footer>
