@@ -1,0 +1,117 @@
+{
+  "source": "https://casitamexicana.de/wp-content/uploads/2026/04/C4_A3_14_03_26_RZ_Sudstadt.pdf",
+  "captured": "2026-07-17",
+  "restaurant": "Casita Mexicana — Köln-Südstadt",
+  "address": "Severinstr. 10-12, 50678 Köln-Südstadt",
+  "phone": "0221 95936466",
+  "hours": {
+    "Mo-Do": "12:00-23:00 (Küche bis 22:00)",
+    "Fr": "12:00-00:00 (Küche bis 23:00)",
+    "Sa": "13:00-00:00 (Küche bis 23:00)",
+    "So & Feiertage": "13:00-22:30 (Küche bis 21:30)"
+  },
+  "reservations": "telefonisch",
+  "delivery": "Uber Eats",
+  "note": "Prices verbatim from official PDF. Vegan/veggie & allergen notes exist on card.",
+  "sections": {
+    "ESPECIALES": [
+      {"n":"Quesabirrias","p":"17,9","d":"3 Maistortillas gefüllt mit butterzartem Rindfleisch in würzigem Adobo, mit gegrilltem Mozzarella-Käse, Koriander und Zwiebeln"},
+      {"n":"Nacho Burrito","p":"15,9","d":"Picadillo-Füllung, Mozzarella-Käse, Bohnen, Tortilla-Chips, Käsedip, Pico de Gallo, Jalapeños & Salsa Verde"},
+      {"n":"Burrito a la Diabla","p":"15,9","d":"Mozzarella-Käse, Hähnchen, Chipotlesoße, Bacon, Zwiebel, Koriander & Salsa Verde"}
+    ],
+    "STARTERS": [
+      {"n":"Chips & Guacamole","p":"9,5","d":"Frische Guacamole mit Tortilla-Chips"},
+      {"n":"Crema de Atún","p":"9,5","d":"Thunfisch, Frischkäse, Chipotle und Paprika mit Tortilla-Chips"},
+      {"n":"Frijoles Refritos","p":"7,5","d":"Pinto-Bohnenmousse, Feta-Käse und Tortilla-Chips (auch vegan möglich)"},
+      {"n":"Mix de Botanas","p":"14,9","d":"Guacamole, Crema de Atún, Frijoles Refritos, drei verschiedene Salsas und Tortilla-Chips"},
+      {"n":"Quesadillas Mini","p":"8,5","d":"Maistortillas mit geschmolzenem Käse, Salsa Verde und Guacamole (4 Stk.)"},
+      {"n":"Nachos Original","p":"16,9","d":"Tortilla-Chips, Bohnen, Käsedip, mit Mozzarella überbacken, Salsa Verde, Pico de Gallo und Jalapeños"},
+      {"n":"Nachos Especial","p":"19,9","d":"Wie Nachos Original + Füllung deiner Wahl (siehe Füllungen)"}
+    ],
+    "MAINS": [
+      {"n":"Burrito","p":"12,9","d":"Ca. ∅25 cm große, gerollte Weizentortilla mit gegrilltem Mozzarella-Käse, Bohnen, knackigem Salat, Füllung nach Wahl und Salsa Verde"},
+      {"n":"Quesadillas · gleiche Füllung","p":"16,9","d":"Zwei ca. ∅20 cm zusammengeklappte Weizentortillas, gegrillter Mozzarella-Käse, Füllung nach Wahl, Pico de Gallo und Salsa Verde"},
+      {"n":"Quesadillas · zwei verschiedene Füllungen","p":"17,9","d":""},
+      {"n":"Bowl","p":"15,5","d":"Bowl mit mexikanischem Reis, Salsa Verde, Bohnen, buntem Salat und Füllung nach Wahl"},
+      {"n":"Street Tacos","p":"15,9","d":"Vier doppelte Maistortillas mit Füllung nach Wahl, Zwiebeln, Koriander und Salsa Verde (Limetten gratis dazu)"},
+      {"n":"Street Tacos · zwei verschiedene Füllungen","p":"16,9","d":""},
+      {"n":"Street Tacos · mit gegrilltem Mozzarella-Käse","p":"+3","d":""}
+    ],
+    "FÜLLUNGEN": [
+      {"n":"Chicken","p":"","d":"Tinga · Pollo en Salsa Verde · Pollo con Rajas"},
+      {"n":"Beef","p":"","d":"Asada con Nopales (+2) · Asada (+2) · Birria (+2,5)"},
+      {"n":"Pork","p":"","d":"Picadillo · Cochinita Pibil · Al Pastor"},
+      {"n":"Veggie / Vegan","p":"","d":"Nopales · Refritos · Guacamole (+1) · Rajas con Queso (+1) · Calabacita"}
+    ],
+    "BEILAGEN": [
+      {"n":"Beilagensalat","p":"4,5","d":""},
+      {"n":"Guacamole","p":"6,5","d":""},
+      {"n":"Arroz — Mexikanischer Reis","p":"3,5","d":""},
+      {"n":"Frijoles","p":"3,5","d":""},
+      {"n":"Totopos — Tortilla-Chips","p":"3,5","d":""}
+    ],
+    "SALSAS (je 1,9)": [
+      {"n":"Verde","p":"1,9","d":"Grüne Tomatillo, Koriander, Avocado"},
+      {"n":"Roja","p":"1,9","d":"Tomaten, Knoblauch, Chile de Árbol"},
+      {"n":"Taquera","p":"1,9","d":"Tomaten, grüne Chile, Habanero, Koriander, rote Zwiebeln"},
+      {"n":"Habanero","p":"1,9","d":"Habanero Chilisoße"}
+    ],
+    "ADD ONS": [
+      {"n":"Mini Guacamole","p":"3","d":""},
+      {"n":"Jalapeños","p":"1,5","d":""},
+      {"n":"Trío de Salsas","p":"7,5","d":"Drei verschiedene vom Chef ausgewählte Salsas zum Dippen mit Tortilla-Chips"}
+    ],
+    "KIDS": [
+      {"n":"Kinderdilla","p":"5,5","d":"Weizentortilla mit Käse (1 Stück) · mit Hähnchen oder Guacamole 6,9"},
+      {"n":"Reis mit Hähnchen oder Guacamole","p":"6,9","d":""}
+    ],
+    "MARGARITAS (10,9 · als Virgin 7,9)": [
+      {"n":"Classic on the Rocks","p":"10,9","d":"Tequila Patrón Blanco, Zitronensaft, Triple Sec & Salzrand"},
+      {"n":"Mango Frozen","p":"10,9","d":"Tequila Patrón Blanco, Zitronensaft, Mangosirup, Triple Sec & Chilirand"},
+      {"n":"Fresón Frozen","p":"10,9","d":"Tequila Patrón Blanco, Zitronensaft, Erdbeersirup, Triple Sec"},
+      {"n":"Sensual","p":"10,9","d":"Tequila Patrón Blanco, Zitronensaft, Passionfruitsirup, Triple Sec"},
+      {"n":"Framosa","p":"10,9","d":"Tequila Patrón Blanco, Zitronensaft, Himbeersirup, Triple Sec"},
+      {"n":"Aperol Margarita","p":"10,9","d":"Tequila Patrón Blanco, Aperol, Zitronensaft & Salzrand"}
+    ],
+    "SIGNATURE COCKTAILS (auch als Virgin 7,9)": [
+      {"n":"Flor de Oaxaca","p":"11,5","d":"Mezcal San Cosme, Hibiskus, Triple Sec, Zitronensaft & Chilirand"},
+      {"n":"Machete","p":"10,9","d":"Mezcal San Cosme, Triple Sec, Zitronensaft, Ananassaft & Chilirand"},
+      {"n":"Mezcalita Classic","p":"10,9","d":"Mezcal San Cosme, Triple Sec, Zitronensaft & Chilirand"},
+      {"n":"Mezcalita Mango","p":"10,9","d":"Mezcal San Cosme, Triple Sec, Zitronensaft, Mangosirup & Chilirand"},
+      {"n":"Tequila Sunrise","p":"11,5","d":"Tequila Patrón Blanco, Zitronensaft, Orangensaft, Grenadine"}
+    ],
+    "APERITIVO": [
+      {"n":"Virgin Colada","p":"6,9","d":"Ananassaft, Kokossirup"},
+      {"n":"Aperol Spritz","p":"7,9","d":"Aperol, Prosecco & Sprudelwasser"},
+      {"n":"Patrón Paloma","p":"11,5","d":"Tequila Patrón Blanco, Grapefruitlimonade, Zitronensaft"}
+    ],
+    "CERVEZAS": [
+      {"n":"Gaffel Kölsch 0,2 / 0,4 L","p":"2,4 / 4,5","d":""},
+      {"n":"Anheuser-Busch Bud 0,3 / 0,5 L","p":"3,9 / 6","d":""},
+      {"n":"Radler 0,3 / 0,5 L","p":"3,9 / 6","d":""},
+      {"n":"Corona 0,33 L","p":"4,9","d":""},
+      {"n":"Corona 0,0% 0,33 L","p":"4,9","d":""},
+      {"n":"Imported Mexican Beer 0,33 L","p":"5,9","d":"Frag unser Personal nach dem aktuellen Bestand"},
+      {"n":"San Miguel 0,33 L","p":"4,5","d":""},
+      {"n":"Franziskaner Weizen 0,5 L","p":"5,5","d":""},
+      {"n":"Franziskaner Weizen Alkoholfrei 0,5 L","p":"5,5","d":""},
+      {"n":"Radler Alkoholfrei 0,5 L","p":"6","d":""},
+      {"n":"Pimp my Beer: Michelada / Chelada","p":"+2,9","d":"Hausgemachte würzige Salsa bzw. Zitronensaft & Salzrand mit dem mexikanischen Flaschenbier deiner Wahl"}
+    ],
+    "VINO": [
+      {"n":"Weiss — Riesling Bio 0,15 / 0,7 L","p":"6,5 / 25","d":"Hiestand (Rheinhessen)"},
+      {"n":"Rosé — Lágrima Bio 0,15 / 0,7 L","p":"6,9 / 29","d":"Ochoa (Spanien)"},
+      {"n":"Rot — Malbec 0,15 / 0,7 L","p":"6,5 / 25","d":"San Felipe (Argentinien)"},
+      {"n":"Prosecco 0,15 / 0,7 L","p":"6,9 / 29","d":"(Italien)"}
+    ],
+    "SOFTS": [
+      {"n":"Purezza Premium Water 0,35 / 0,75 L","p":"2,9 / 5","d":"Mit Kohlensäure oder Still"},
+      {"n":"Coke & Co 0,3 / 0,5 L","p":"3,5 / 4,9","d":"Coca-Cola, Coca-Cola Zero, Spezi, Sprite, Fanta"},
+      {"n":"Schorle 0,3 / 0,5 L","p":"3,5 / 5,2","d":"Jamaica, Ananas, Apfel, Maracuja"},
+      {"n":"Saft 0,3 / 0,5 L","p":"3,7 / 5,5","d":"Ananas, Apfel, Orange, Maracuja"},
+      {"n":"Agua de Jamaica 0,3 / 0,5 L","p":"3,3 / 4,5","d":"Hausgemachter Hibiskusgenuss"},
+      {"n":"Limonada 0,3 / 0,5 L","p":"3,9 / 5,5","d":"Hausgemacht, aus Zitronen"}
+    ]
+  },
+  "happy_hour": "Mo–Mi: alle Cocktails nur 8,9 · Virgins nur 6,9"
+}

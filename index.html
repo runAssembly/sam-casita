@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#8A3324">
-<meta name="description" content="Casita Mexicana — authentische mexikanische Küche im Severinsviertel, Köln-Südstadt. Tacos, Nachos, Quesadillas und Margaritas. Jetzt reservieren.">
+<meta name="description" content="Casita Mexicana — authentische mexikanische Küche im Severinsviertel, Köln-Südstadt. Tacos, Burritos, Quesadillas, Nachos & Margaritas. Jetzt Tisch reservieren.">
 <title>Casita Mexicana — Mexikanisch in der Kölner Südstadt</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,10 +20,10 @@
   .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
   a{text-decoration:none;color:inherit}
   .display{font-family:'Cormorant Garamond',serif}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:15px 30px;font-size:14px;font-weight:600;transition:transform .2s ease,opacity .2s ease}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:15px 30px;font-size:14px;font-weight:600;transition:transform .2s ease,opacity .2s ease;cursor:pointer;border:none;font-family:inherit}
   .btn:hover{transform:translateY(-1px)}
   .btn-solid{background:var(--accent);color:var(--ground)}
-  .btn-ghost{border:1px solid rgba(42,33,28,.28);color:var(--ink)}
+  .btn-ghost{border:1px solid rgba(42,33,28,.28);color:var(--ink);background:transparent}
   .btn-onhero{background:var(--ground);color:var(--deep)}
   .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
   .reveal.in{opacity:1;transform:none}
@@ -67,7 +67,7 @@
   .dishes h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4.6vw,50px);letter-spacing:-.01em;margin-top:10px}
   .cards{margin-top:46px;display:grid;grid-template-columns:1fr;gap:20px}
   @media(min-width:720px){ .cards{grid-template-columns:repeat(3,1fr)} }
-  .card{position:relative;height:420px;border-radius:22px;overflow:hidden;box-shadow:0 20px 50px -28px rgba(0,0,0,.5)}
+  .card{position:relative;height:420px;border-radius:22px;overflow:hidden;box-shadow:0 20px 50px -28px rgba(0,0,0,.5);cursor:pointer}
   .card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s ease}
   .card:hover img{transform:scale(1.06)}
   .card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,12,8,.05) 0%,transparent 32%,rgba(20,12,8,.35) 60%,rgba(20,12,8,.86) 100%)}
@@ -78,22 +78,22 @@
 
   /* ---------- menu ---------- */
   .menu{padding:70px 0 20px}
-  .menu .mhead{max-width:640px;margin-bottom:44px}
+  .menu .mhead{max-width:680px;margin-bottom:20px}
   .menu h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4.6vw,50px);letter-spacing:-.01em;margin-top:10px}
-  .menu .cols{display:grid;grid-template-columns:1fr;gap:20px 64px}
-  @media(min-width:820px){ .menu .cols{grid-template-columns:1fr 1fr} }
-  .mgroup{margin-bottom:30px}
-  .mgroup h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:24px;text-transform:uppercase;letter-spacing:.04em;color:var(--accent);display:flex;align-items:center;gap:14px}
+  .menu .mlede{margin-top:12px;color:var(--soft);font-size:15px;line-height:1.6;max-width:60ch}
+  .hh{display:inline-block;margin-top:16px;background:rgba(169,129,47,.14);border:1px solid rgba(169,129,47,.4);color:var(--deep);border-radius:999px;padding:8px 16px;font-size:12.5px;font-weight:600;letter-spacing:.02em}
+  .mcols{margin-top:40px;columns:2;column-gap:64px}
+  @media(max-width:820px){ .mcols{columns:1} }
+  .mgroup{margin-bottom:30px;break-inside:avoid}
+  .mgroup h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:23px;text-transform:uppercase;letter-spacing:.04em;color:var(--accent);display:flex;align-items:center;gap:14px}
   .mgroup h3::after{content:'';flex:1;height:1px;background:var(--line)}
-  .mrow{display:flex;align-items:baseline;gap:10px;margin-top:16px}
-  .mrow .n{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:20px;white-space:nowrap}
-  .mrow .d{flex:1;border-bottom:1.5px dotted #c9b89e;transform:translateY(-4px)}
+  .mrow{display:flex;align-items:baseline;gap:10px;margin-top:15px}
+  .mrow .n{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:19px;white-space:normal}
+  .mrow .d{flex:1;border-bottom:1.5px dotted #c9b89e;transform:translateY(-4px);min-width:14px}
   .mrow .p{font-weight:600;font-size:15px;color:var(--accent);white-space:nowrap}
-  .mdesc{font-size:13.5px;line-height:1.5;color:var(--soft);margin-top:4px;max-width:92%}
-  .mribbon{grid-column:1/-1;background:var(--accent);color:var(--ground);border-radius:16px;padding:20px 26px;text-align:center;margin:6px 0 10px}
-  .mribbon .t{font-size:11px;letter-spacing:.28em;text-transform:uppercase;opacity:.85;font-weight:600}
-  .mribbon .v{font-family:'Cormorant Garamond',serif;font-size:22px;margin-top:6px}
-  .mnote{font-size:12.5px;color:var(--soft);margin-top:8px}
+  .mdesc{font-size:13px;line-height:1.5;color:var(--soft);margin-top:4px;max-width:96%}
+  .mnote{font-size:12.5px;color:var(--soft);margin-top:10px;line-height:1.6}
+  .mlegend{margin-top:18px;font-size:12px;color:var(--soft);letter-spacing:.02em}
 
   /* ---------- statement ---------- */
   .statement{padding:110px 0}
@@ -104,8 +104,8 @@
   .reserve{padding:0 0 96px}
   .reserve .box{background:var(--accent);color:var(--ground);border-radius:28px;padding:64px 40px;text-align:center}
   .reserve h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(32px,5vw,58px);line-height:1.02}
-  .reserve .sub{margin:16px auto 0;max-width:440px;color:rgba(244,237,223,.86);font-size:15.5px;line-height:1.6}
-  .reserve .phone{margin-top:30px}
+  .reserve .sub{margin:16px auto 0;max-width:460px;color:rgba(244,237,223,.86);font-size:15.5px;line-height:1.6}
+  .reserve .phone{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
   .reserve .phone .btn{font-size:15px;padding:16px 34px}
   .info{margin-top:40px;display:grid;grid-template-columns:1fr;gap:22px;text-align:left;max-width:760px;margin-left:auto;margin-right:auto}
   @media(min-width:720px){ .info{grid-template-columns:repeat(3,1fr)} }
@@ -119,6 +119,28 @@
   .foot .b{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:20px;color:var(--accent)}
   .foot .r{font-size:12.5px;color:var(--soft)}
   @media(min-width:720px){ .foot{flex-direction:row;align-items:center} }
+
+  /* ---------- reservation modal ---------- */
+  .modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+  .modal.open{display:flex}
+  .modal .scrim{position:absolute;inset:0;background:rgba(18,11,7,.62);backdrop-filter:blur(3px)}
+  .modal .sheet{position:relative;z-index:2;background:var(--ground);border-radius:24px;max-width:460px;width:100%;padding:38px 32px 30px;box-shadow:0 40px 90px -30px rgba(0,0,0,.6);max-height:92vh;overflow:auto}
+  .modal .x{position:absolute;top:16px;right:18px;font-size:26px;line-height:1;color:var(--soft);background:none;border:none;cursor:pointer}
+  .modal h3{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:30px;color:var(--accent)}
+  .modal .msub{margin-top:8px;color:var(--soft);font-size:14px;line-height:1.55}
+  .field{margin-top:16px;text-align:left}
+  .field label{display:block;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--soft);margin-bottom:6px}
+  .field input,.field textarea,.field select{width:100%;border:1px solid var(--line);background:#fff;border-radius:12px;padding:12px 14px;font-family:inherit;font-size:15px;color:var(--ink)}
+  .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--accent)}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .modal .submit{margin-top:22px;width:100%}
+  .modal .fineprint{margin-top:14px;font-size:12px;color:var(--soft);line-height:1.5;text-align:center}
+  .modal .fineprint a{color:var(--accent);border-bottom:1px solid rgba(138,51,36,.35)}
+  .thanks{display:none;text-align:center;padding:14px 0}
+  .thanks.show{display:block}
+  .thanks .ok{font-size:44px}
+  .thanks h3{margin-top:6px}
+  .thanks p{margin-top:10px;color:var(--soft);font-size:14.5px;line-height:1.6}
 </style>
 </head>
 <body>
@@ -129,15 +151,15 @@
     <header>
       <div class="wrap nav">
         <div class="brand">Casita Mexicana</div>
-        <a href="tel:+4922195936466" class="btn btn-onhero">Reservieren</a>
+        <button class="btn btn-onhero" data-reserve>Reservieren</button>
       </div>
     </header>
     <div class="wrap hero-inner">
       <p class="kicker reveal">Cocina Mexicana · Köln-Südstadt</p>
       <h1 class="reveal">México, mitten<br>in der <em>Südstadt.</em></h1>
-      <p class="lede reveal">Authentische mexikanische Küche im Herzen des Severinsviertels — Tacos, Nachos und Quesadillas, frisch zubereitet, dazu eiskalte Margaritas. Einfach vorbeikommen oder einen Tisch reservieren.</p>
+      <p class="lede reveal">Authentische mexikanische Küche im Herzen des Severinsviertels — Tacos, Burritos, Nachos und Quesadillas, frisch zubereitet, dazu handgemachte Margaritas und Mezcal-Cocktails. Einfach vorbeikommen oder einen Tisch reservieren.</p>
       <div class="cta reveal">
-        <a href="tel:+4922195936466" class="btn btn-solid">Tisch reservieren</a>
+        <button class="btn btn-solid" data-reserve>Tisch reservieren</button>
         <a href="#menu" class="btn btn-onhero">Speisekarte ansehen</a>
       </div>
       <p class="meta reveal">Severinstraße 10–12 · 50678 Köln · Reservierung: 0221 95936466</p>
@@ -153,7 +175,7 @@
       </div>
       <div class="reveal">
         <div class="rule"></div>
-        <p>Bei Casita Mexicana dreht sich alles um ehrliche, authentische mexikanische Küche — so, wie man sie auch in México kennt. Weiche Maistortillas, langsam geschmortes Cochinita Pibil, knusprige Nachos mit hausgemachten Salsas und Quesadillas mit geschmolzenem Käse. Dazu Margaritas, Corona und Agua de Jamaica. Mitten in der Kölner Südstadt, an der Severinstraße — entspannt, herzlich und immer einen Besuch wert.</p>
+        <p>Bei Casita Mexicana dreht sich alles um ehrliche, authentische mexikanische Küche — so, wie man sie auch in México kennt. Weiche Maistortillas, butterzarte Birria, langsam geschmortes Cochinita Pibil, knusprige Nachos mit hausgemachten Salsas und Quesadillas mit geschmolzenem Käse. Dazu Margaritas mit frisch gepresstem Zitronensaft, Mezcalitas, Corona und Agua de Jamaica. Mitten in der Kölner Südstadt, an der Severinstraße — entspannt, herzlich und immer einen Besuch wert.</p>
       </div>
     </div>
   </section>
@@ -167,19 +189,19 @@
       </div>
       <div class="cards">
         <a href="#menu" class="card reveal">
-          <img src="tacos.png" alt="Tacos Cochinita Pibil">
-          <span class="price">ab €12,9</span>
+          <img src="tacos.png" alt="Street Tacos mit Füllung nach Wahl">
+          <span class="price">ab €15,9</span>
           <div class="txt">
-            <h3>Tacos</h3>
-            <p>Doppelte weiche Maistortillas, Füllung nach Wahl — Cochinita Pibil, Pastor, Picadillo oder Vegetariano — mit Zwiebeln, Koriander und Salsa Verde.</p>
+            <h3>Street Tacos</h3>
+            <p>Vier doppelte Maistortillas, Füllung nach Wahl — Cochinita Pibil, Al Pastor, Birria, Tinga u.v.m. — mit Zwiebeln, Koriander und Salsa Verde. Limetten gratis dazu.</p>
           </div>
         </a>
         <a href="#menu" class="card reveal">
           <img src="nachos.png" alt="Nachos Original">
-          <span class="price">ab €18,5</span>
+          <span class="price">ab €16,9</span>
           <div class="txt">
             <h3>Nachos</h3>
-            <p>Knusprige Maistortilla-Chips mit Bohnen und Käsesoße überbacken, Salsa Verde, frischer Pico de Gallo und Jalapeños.</p>
+            <p>Knusprige Tortilla-Chips mit Bohnen und Käsedip, mit Mozzarella überbacken, Salsa Verde, frischer Pico de Gallo und Jalapeños.</p>
           </div>
         </a>
         <a href="#menu" class="card reveal">
@@ -187,7 +209,7 @@
           <span class="price">€16,9</span>
           <div class="txt">
             <h3>Quesadillas</h3>
-            <p>Weizentortillas mit gegrilltem Cheddar-Mozzarella, Füllung nach Wahl, frischer Pico de Gallo und Salsa Verde.</p>
+            <p>Zwei zusammengeklappte Weizentortillas mit gegrilltem Mozzarella, Füllung nach Wahl, Pico de Gallo und Salsa Verde.</p>
           </div>
         </a>
       </div>
@@ -200,48 +222,192 @@
       <div class="mhead reveal">
         <p class="kicker">Speisekarte</p>
         <h2>Unsere Karte.</h2>
+        <p class="mlede">Frisch zubereitet, ehrlich mexikanisch. Bei Tacos, Burritos, Quesadillas, Bowls und Nachos Especial wählst du deine Füllung aus der Liste „Füllungen“. Alle Preise in Euro.</p>
+        <span class="hh">Happy Hour · Mo–Mi: alle Cocktails 8,9 · Virgins 6,9</span>
       </div>
-      <div class="cols">
-        <div>
-          <div class="mgroup reveal">
-            <h3>Nachos</h3>
-            <div class="mrow"><span class="n">Original</span><span class="d"></span><span class="p">€18,5</span></div>
-            <div class="mdesc">Knusprige Maistortilla-Chips mit Bohnen und Käsesoße überbacken, Salsa Verde, frischer Pico de Gallo und Jalapeños.</div>
-            <div class="mrow"><span class="n">Tres Quesos</span><span class="d"></span><span class="p">€21,0</span></div>
-            <div class="mdesc">Wie Original, plus Cheddar und Mozzarella — dreifach überbacken.</div>
-            <div class="mrow"><span class="n">Especial</span><span class="d"></span><span class="p">€23,9</span></div>
-            <div class="mdesc">Tres Quesos mit einer Füllung deiner Wahl.</div>
-          </div>
-          <div class="mgroup reveal">
-            <h3>Quesadillas</h3>
-            <div class="mrow"><span class="n">Quesadillas · zwei Stück</span><span class="d"></span><span class="p">€16,9</span></div>
-            <div class="mdesc">Ø 20 cm Weizentortillas mit gegrilltem Cheddar-Mozzarella, einer Füllung nach Wahl, frischer Pico de Gallo und Salsa Verde.</div>
-          </div>
+      <div class="mcols">
+
+        <div class="mgroup reveal">
+          <h3>Especiales</h3>
+          <div class="mrow"><span class="n">Quesabirrias</span><span class="d"></span><span class="p">€17,9</span></div>
+          <div class="mdesc">3 Maistortillas gefüllt mit butterzartem Rindfleisch in würzigem Adobo, mit gegrilltem Mozzarella-Käse, Koriander und Zwiebeln.</div>
+          <div class="mrow"><span class="n">Nacho Burrito</span><span class="d"></span><span class="p">€15,9</span></div>
+          <div class="mdesc">Picadillo-Füllung, Mozzarella-Käse, Bohnen, Tortilla-Chips, Käsedip, Pico de Gallo, Jalapeños & Salsa Verde.</div>
+          <div class="mrow"><span class="n">Burrito a la Diabla</span><span class="d"></span><span class="p">€15,9</span></div>
+          <div class="mdesc">Mozzarella-Käse, Hähnchen, Chipotlesoße, Bacon, Zwiebel, Koriander & Salsa Verde.</div>
         </div>
-        <div>
-          <div class="mgroup reveal">
-            <h3>Tacos</h3>
-            <div class="mrow"><span class="n">Tacos · vier Stück</span><span class="d"></span><span class="p">€12,9</span></div>
-            <div class="mdesc">Doppelte weiche Maistortillas mit einer Füllung nach Wahl, frischen Zwiebeln, Koriander und Salsa Verde.</div>
-            <div class="mrow"><span class="n">Mit zwei Füllungen</span><span class="d"></span><span class="p">€13,9</span></div>
-            <div class="mdesc">Cheese it up — gegrillter Cheddar-Mozzarella · + €3,5</div>
-          </div>
-          <div class="mgroup reveal">
-            <h3>Bebidas</h3>
-            <div class="mrow"><span class="n">Agua de Jamaica</span><span class="d"></span><span class="p">€3,5</span></div>
-            <div class="mrow"><span class="n">Gaffel Kölsch 0,4</span><span class="d"></span><span class="p">€4,5</span></div>
-            <div class="mrow"><span class="n">Corona</span><span class="d"></span><span class="p">€4,9</span></div>
-            <div class="mrow"><span class="n">Margarita</span><span class="d"></span><span class="p">€8,9</span></div>
-            <div class="mrow"><span class="n">Café / Espresso</span><span class="d"></span><span class="p">€2,6</span></div>
-            <div class="mrow"><span class="n">Prosecco 0,7</span><span class="d"></span><span class="p">€29</span></div>
-          </div>
+
+        <div class="mgroup reveal">
+          <h3>Starters</h3>
+          <div class="mrow"><span class="n">Chips & Guacamole</span><span class="d"></span><span class="p">€9,5</span></div>
+          <div class="mdesc">Frische Guacamole mit Tortilla-Chips.</div>
+          <div class="mrow"><span class="n">Crema de Atún</span><span class="d"></span><span class="p">€9,5</span></div>
+          <div class="mdesc">Thunfisch, Frischkäse, Chipotle und Paprika mit Tortilla-Chips.</div>
+          <div class="mrow"><span class="n">Frijoles Refritos</span><span class="d"></span><span class="p">€7,5</span></div>
+          <div class="mdesc">Pinto-Bohnenmousse, Feta-Käse und Tortilla-Chips (auch vegan möglich).</div>
+          <div class="mrow"><span class="n">Mix de Botanas</span><span class="d"></span><span class="p">€14,9</span></div>
+          <div class="mdesc">Guacamole, Crema de Atún, Frijoles Refritos, drei verschiedene Salsas und Tortilla-Chips.</div>
+          <div class="mrow"><span class="n">Quesadillas Mini</span><span class="d"></span><span class="p">€8,5</span></div>
+          <div class="mdesc">Maistortillas mit geschmolzenem Käse, Salsa Verde und Guacamole (4 Stk.).</div>
+          <div class="mrow"><span class="n">Nachos Original</span><span class="d"></span><span class="p">€16,9</span></div>
+          <div class="mdesc">Tortilla-Chips, Bohnen, Käsedip, mit Mozzarella überbacken, Salsa Verde, Pico de Gallo und Jalapeños.</div>
+          <div class="mrow"><span class="n">Nachos Especial</span><span class="d"></span><span class="p">€19,9</span></div>
+          <div class="mdesc">Wie Nachos Original + Füllung deiner Wahl (siehe „Füllungen“).</div>
         </div>
-        <div class="mribbon reveal">
-          <div class="t">Rellenos · Wähle deine Füllung</div>
-          <div class="v">Cochinita Pibil · Pastor +€1 · Picadillo · Vegetariano</div>
+
+        <div class="mgroup reveal">
+          <h3>Mains</h3>
+          <div class="mrow"><span class="n">Burrito</span><span class="d"></span><span class="p">€12,9</span></div>
+          <div class="mdesc">Ca. ⌀25 cm große, gerollte Weizentortilla mit gegrilltem Mozzarella-Käse, Bohnen, knackigem Salat, Füllung nach Wahl und Salsa Verde.</div>
+          <div class="mrow"><span class="n">Quesadillas · gleiche Füllung</span><span class="d"></span><span class="p">€16,9</span></div>
+          <div class="mdesc">Zwei ca. ⌀20 cm zusammengeklappte Weizentortillas, gegrillter Mozzarella-Käse, Füllung nach Wahl, Pico de Gallo und Salsa Verde.</div>
+          <div class="mrow"><span class="n">Quesadillas · zwei verschiedene Füllungen</span><span class="d"></span><span class="p">€17,9</span></div>
+          <div class="mrow"><span class="n">Bowl</span><span class="d"></span><span class="p">€15,5</span></div>
+          <div class="mdesc">Bowl mit mexikanischem Reis, Salsa Verde, Bohnen, buntem Salat und Füllung nach Wahl.</div>
+          <div class="mrow"><span class="n">Street Tacos</span><span class="d"></span><span class="p">€15,9</span></div>
+          <div class="mdesc">Vier doppelte Maistortillas mit Füllung nach Wahl, Zwiebeln, Koriander und Salsa Verde. Limetten gratis dazu.</div>
+          <div class="mrow"><span class="n">Street Tacos · zwei verschiedene Füllungen</span><span class="d"></span><span class="p">€16,9</span></div>
+          <div class="mrow"><span class="n">Street Tacos · mit gegrilltem Mozzarella</span><span class="d"></span><span class="p">+€3</span></div>
         </div>
+
+        <div class="mgroup reveal">
+          <h3>Füllungen</h3>
+          <div class="mrow"><span class="n">Chicken</span></div>
+          <div class="mdesc">Tinga · Pollo en Salsa Verde · Pollo con Rajas</div>
+          <div class="mrow"><span class="n">Beef</span></div>
+          <div class="mdesc">Asada con Nopales (+€2) · Asada (+€2) · Birria (+€2,5)</div>
+          <div class="mrow"><span class="n">Pork</span></div>
+          <div class="mdesc">Picadillo · Cochinita Pibil · Al Pastor</div>
+          <div class="mrow"><span class="n">Veggie / Vegan</span></div>
+          <div class="mdesc">Nopales · Refritos · Guacamole (+€1) · Rajas con Queso (+€1) · Calabacita</div>
+        </div>
+
+        <div class="mgroup reveal">
+          <h3>Beilagen</h3>
+          <div class="mrow"><span class="n">Beilagensalat</span><span class="d"></span><span class="p">€4,5</span></div>
+          <div class="mrow"><span class="n">Guacamole</span><span class="d"></span><span class="p">€6,5</span></div>
+          <div class="mrow"><span class="n">Arroz · Mexikanischer Reis</span><span class="d"></span><span class="p">€3,5</span></div>
+          <div class="mrow"><span class="n">Frijoles</span><span class="d"></span><span class="p">€3,5</span></div>
+          <div class="mrow"><span class="n">Totopos · Tortilla-Chips</span><span class="d"></span><span class="p">€3,5</span></div>
+        </div>
+
+        <div class="mgroup reveal">
+          <h3>Salsas · je €1,9</h3>
+          <div class="mrow"><span class="n">Verde</span><span class="d"></span><span class="p">€1,9</span></div>
+          <div class="mdesc">Grüne Tomatillo, Koriander, Avocado.</div>
+          <div class="mrow"><span class="n">Roja</span><span class="d"></span><span class="p">€1,9</span></div>
+          <div class="mdesc">Tomaten, Knoblauch, Chile de Árbol.</div>
+          <div class="mrow"><span class="n">Taquera</span><span class="d"></span><span class="p">€1,9</span></div>
+          <div class="mdesc">Tomaten, grüne Chile, Habanero, Koriander, rote Zwiebeln.</div>
+          <div class="mrow"><span class="n">Habanero</span><span class="d"></span><span class="p">€1,9</span></div>
+          <div class="mdesc">Habanero Chilisoße.</div>
+        </div>
+
+        <div class="mgroup reveal">
+          <h3>Add Ons</h3>
+          <div class="mrow"><span class="n">Mini Guacamole</span><span class="d"></span><span class="p">€3</span></div>
+          <div class="mrow"><span class="n">Jalapeños</span><span class="d"></span><span class="p">€1,5</span></div>
+          <div class="mrow"><span class="n">Trío de Salsas</span><span class="d"></span><span class="p">€7,5</span></div>
+          <div class="mdesc">Drei verschiedene vom Chef ausgewählte Salsas zum Dippen mit Tortilla-Chips.</div>
+        </div>
+
+        <div class="mgroup reveal">
+          <h3>Kids</h3>
+          <div class="mrow"><span class="n">Kinderdilla</span><span class="d"></span><span class="p">€5,5</span></div>
+          <div class="mdesc">Weizentortilla mit Käse (1 Stück) · mit Hähnchen oder Guacamole €6,9.</div>
+          <div class="mrow"><span class="n">Reis mit Hähnchen oder Guacamole</span><span class="d"></span><span class="p">€6,9</span></div>
+        </div>
+
+        <div class="mgroup reveal">
+          <h3>Margaritas · 10,9</h3>
+          <div class="mnote" style="margin-top:2px">Auch als Virgin für €7,9.</div>
+          <div class="mrow"><span class="n">Classic on the Rocks</span><span class="d"></span><span class="p">€10,9</span></div>
+          <div class="mdesc">Tequila Patrón Blanco, Zitronensaft, Triple Sec & Salzrand.</div>
+          <div class="mrow"><span class="n">Mango Frozen</span><span class="d"></span><span class="p">€10,9</span></div>
+          <div class="mdesc">Tequila Patrón Blanco, Zitronensaft, Mangosirup, Triple Sec & Chilirand.</div>
+          <div class="mrow"><span class="n">Fresón Frozen</span><span class="d"></span><span class="p">€10,9</span></div>
+          <div class="mdesc">Tequila Patrón Blanco, Zitronensaft, Erdbeersirup, Triple Sec.</div>
+          <div class="mrow"><span class="n">Sensual</span><span class="d"></span><span class="p">€10,9</span></div>
+          <div class="mdesc">Tequila Patrón Blanco, Zitronensaft, Passionfruitsirup, Triple Sec.</div>
+          <div class="mrow"><span class="n">Framosa</span><span class="d"></span><span class="p">€10,9</span></div>
+          <div class="mdesc">Tequila Patrón Blanco, Zitronensaft, Himbeersirup, Triple Sec.</div>
+          <div class="mrow"><span class="n">Aperol Margarita</span><span class="d"></span><span class="p">€10,9</span></div>
+          <div class="mdesc">Tequila Patrón Blanco, Aperol, Zitronensaft & Salzrand.</div>
+        </div>
+
+        <div class="mgroup reveal">
+          <h3>Signature Cocktails</h3>
+          <div class="mnote" style="margin-top:2px">Auch als Virgin für €7,9.</div>
+          <div class="mrow"><span class="n">Flor de Oaxaca</span><span class="d"></span><span class="p">€11,5</span></div>
+          <div class="mdesc">Mezcal San Cosme, Hibiskus, Triple Sec, Zitronensaft & Chilirand.</div>
+          <div class="mrow"><span class="n">Machete</span><span class="d"></span><span class="p">€10,9</span></div>
+          <div class="mdesc">Mezcal San Cosme, Triple Sec, Zitronensaft, Ananassaft & Chilirand.</div>
+          <div class="mrow"><span class="n">Mezcalita Classic</span><span class="d"></span><span class="p">€10,9</span></div>
+          <div class="mdesc">Mezcal San Cosme, Triple Sec, Zitronensaft & Chilirand.</div>
+          <div class="mrow"><span class="n">Mezcalita Mango</span><span class="d"></span><span class="p">€10,9</span></div>
+          <div class="mdesc">Mezcal San Cosme, Triple Sec, Zitronensaft, Mangosirup & Chilirand.</div>
+          <div class="mrow"><span class="n">Tequila Sunrise</span><span class="d"></span><span class="p">€11,5</span></div>
+          <div class="mdesc">Tequila Patrón Blanco, Zitronensaft, Orangensaft, Grenadine.</div>
+        </div>
+
+        <div class="mgroup reveal">
+          <h3>Aperitivo</h3>
+          <div class="mrow"><span class="n">Virgin Colada</span><span class="d"></span><span class="p">€6,9</span></div>
+          <div class="mdesc">Ananassaft, Kokossirup.</div>
+          <div class="mrow"><span class="n">Aperol Spritz</span><span class="d"></span><span class="p">€7,9</span></div>
+          <div class="mdesc">Aperol, Prosecco & Sprudelwasser.</div>
+          <div class="mrow"><span class="n">Patrón Paloma</span><span class="d"></span><span class="p">€11,5</span></div>
+          <div class="mdesc">Tequila Patrón Blanco, Grapefruitlimonade, Zitronensaft.</div>
+        </div>
+
+        <div class="mgroup reveal">
+          <h3>Cervezas</h3>
+          <div class="mrow"><span class="n">Gaffel Kölsch · 0,2 / 0,4 L</span><span class="d"></span><span class="p">€2,4 / 4,5</span></div>
+          <div class="mrow"><span class="n">Anheuser-Busch Bud · 0,3 / 0,5 L</span><span class="d"></span><span class="p">€3,9 / 6</span></div>
+          <div class="mrow"><span class="n">Radler · 0,3 / 0,5 L</span><span class="d"></span><span class="p">€3,9 / 6</span></div>
+          <div class="mrow"><span class="n">Corona · 0,33 L</span><span class="d"></span><span class="p">€4,9</span></div>
+          <div class="mrow"><span class="n">Corona 0,0% · 0,33 L</span><span class="d"></span><span class="p">€4,9</span></div>
+          <div class="mrow"><span class="n">Imported Mexican Beer · 0,33 L</span><span class="d"></span><span class="p">€5,9</span></div>
+          <div class="mdesc">Frag unser Personal nach dem aktuellen Bestand.</div>
+          <div class="mrow"><span class="n">San Miguel · 0,33 L</span><span class="d"></span><span class="p">€4,5</span></div>
+          <div class="mrow"><span class="n">Franziskaner Weizen · 0,5 L</span><span class="d"></span><span class="p">€5,5</span></div>
+          <div class="mrow"><span class="n">Franziskaner Weizen Alkoholfrei · 0,5 L</span><span class="d"></span><span class="p">€5,5</span></div>
+          <div class="mrow"><span class="n">Radler Alkoholfrei · 0,5 L</span><span class="d"></span><span class="p">€6</span></div>
+          <div class="mrow"><span class="n">Pimp my Beer · Michelada / Chelada</span><span class="d"></span><span class="p">+€2,9</span></div>
+          <div class="mdesc">Hausgemachte würzige Salsa bzw. Zitronensaft & Salzrand mit dem mexikanischen Flaschenbier deiner Wahl.</div>
+        </div>
+
+        <div class="mgroup reveal">
+          <h3>Vino</h3>
+          <div class="mrow"><span class="n">Weiss · Riesling Bio · 0,15 / 0,7 L</span><span class="d"></span><span class="p">€6,5 / 25</span></div>
+          <div class="mdesc">Hiestand (Rheinhessen).</div>
+          <div class="mrow"><span class="n">Rosé · Lágrima Bio · 0,15 / 0,7 L</span><span class="d"></span><span class="p">€6,9 / 29</span></div>
+          <div class="mdesc">Ochoa (Spanien).</div>
+          <div class="mrow"><span class="n">Rot · Malbec · 0,15 / 0,7 L</span><span class="d"></span><span class="p">€6,5 / 25</span></div>
+          <div class="mdesc">San Felipe (Argentinien).</div>
+          <div class="mrow"><span class="n">Prosecco · 0,15 / 0,7 L</span><span class="d"></span><span class="p">€6,9 / 29</span></div>
+          <div class="mdesc">Italien.</div>
+        </div>
+
+        <div class="mgroup reveal">
+          <h3>Softs</h3>
+          <div class="mrow"><span class="n">Purezza Premium Water · 0,35 / 0,75 L</span><span class="d"></span><span class="p">€2,9 / 5</span></div>
+          <div class="mdesc">Mit Kohlensäure oder still.</div>
+          <div class="mrow"><span class="n">Coke & Co · 0,3 / 0,5 L</span><span class="d"></span><span class="p">€3,5 / 4,9</span></div>
+          <div class="mdesc">Coca-Cola, Coca-Cola Zero, Spezi, Sprite, Fanta.</div>
+          <div class="mrow"><span class="n">Schorle · 0,3 / 0,5 L</span><span class="d"></span><span class="p">€3,5 / 5,2</span></div>
+          <div class="mdesc">Jamaica, Ananas, Apfel, Maracuja.</div>
+          <div class="mrow"><span class="n">Saft · 0,3 / 0,5 L</span><span class="d"></span><span class="p">€3,7 / 5,5</span></div>
+          <div class="mdesc">Ananas, Apfel, Orange, Maracuja.</div>
+          <div class="mrow"><span class="n">Agua de Jamaica · 0,3 / 0,5 L</span><span class="d"></span><span class="p">€3,3 / 4,5</span></div>
+          <div class="mdesc">Hausgemachter Hibiskusgenuss — in México als „agua fresca“ gefeiert.</div>
+          <div class="mrow"><span class="n">Limonada · 0,3 / 0,5 L</span><span class="d"></span><span class="p">€3,9 / 5,5</span></div>
+          <div class="mdesc">Hausgemacht, aus Zitronen.</div>
+        </div>
+
       </div>
-      <p class="mnote reveal">Auszug aus unserer Karte. Alle Preise in Euro.</p>
+      <p class="mnote">Wir verwenden nur frisch gepressten Zitronensaft. Viele Gerichte sind vegetarisch oder vegan möglich — frag einfach unser Team. Allergene variieren je nach Füllung.</p>
+      <p class="mlegend">Auszug entspricht der aktuellen Karte der Casita Mexicana Südstadt. Alle Preise in Euro, inkl. MwSt.</p>
     </div>
   </section>
 
@@ -257,9 +423,10 @@
     <div class="wrap">
       <div class="box reveal">
         <h2>Reservier deinen Tisch.</h2>
-        <p class="sub">Reservierungen nehmen wir am liebsten telefonisch entgegen — ruf einfach an, wir freuen uns auf dich.</p>
+        <p class="sub">Sag uns kurz, wann du mit wie vielen Personen vorbeikommen möchtest — wir melden uns und halten deinen Tisch bereit. Oder ruf einfach an, wir freuen uns auf dich.</p>
         <div class="phone">
-          <a href="tel:+4922195936466" class="btn btn-onhero">Anrufen · 0221 95936466</a>
+          <button class="btn btn-onhero" data-reserve>Tisch anfragen</button>
+          <a href="tel:+4922195936466" class="btn btn-ghost" style="border-color:rgba(244,237,223,.5);color:var(--ground)">Anrufen · 0221 95936466</a>
         </div>
         <div class="info">
           <div class="col">
@@ -268,7 +435,7 @@
           </div>
           <div class="col">
             <div class="l">Öffnungszeiten</div>
-            <div class="v">Mo–Do 12:00–23:00<br>Fr 12:00–00:00<br>Sa 13:00–00:00 · So 13:00–23:00</div>
+            <div class="v">Mo–Do 12:00–23:00<br>Fr 12:00–00:00<br>Sa 13:00–00:00<br>So &amp; Feiertage 13:00–22:30</div>
           </div>
           <div class="col">
             <div class="l">Reservierung</div>
@@ -287,9 +454,74 @@
     </div>
   </footer>
 
+  <!-- RESERVATION MODAL -->
+  <div class="modal" id="resModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="scrim" data-close></div>
+    <div class="sheet">
+      <button class="x" data-close aria-label="Schließen">×</button>
+      <div id="resForm">
+        <h3>Tisch anfragen</h3>
+        <p class="msub">Trag kurz deine Wunsch-Zeit ein — wir bestätigen deine Reservierung so schnell wie möglich.</p>
+        <div class="field">
+          <label for="rName">Name</label>
+          <input id="rName" type="text" placeholder="Dein Name" autocomplete="name">
+        </div>
+        <div class="frow">
+          <div class="field">
+            <label for="rDate">Datum</label>
+            <input id="rDate" type="date">
+          </div>
+          <div class="field">
+            <label for="rTime">Uhrzeit</label>
+            <input id="rTime" type="time">
+          </div>
+        </div>
+        <div class="frow">
+          <div class="field">
+            <label for="rGuests">Personen</label>
+            <select id="rGuests">
+              <option>1</option><option selected>2</option><option>3</option><option>4</option>
+              <option>5</option><option>6</option><option>7</option><option>8+</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="rPhone">Telefon</label>
+            <input id="rPhone" type="tel" placeholder="Für die Bestätigung" autocomplete="tel">
+          </div>
+        </div>
+        <div class="field">
+          <label for="rNote">Nachricht (optional)</label>
+          <textarea id="rNote" rows="2" placeholder="Anlass, Sitzwunsch, Allergien …"></textarea>
+        </div>
+        <button class="btn btn-solid submit" id="rSubmit">Anfrage senden</button>
+        <p class="fineprint">Lieber direkt? Ruf uns an: <a href="tel:+4922195936466">0221 95936466</a></p>
+      </div>
+      <div class="thanks" id="resThanks">
+        <div class="ok">✓</div>
+        <h3>Danke, wir haben deine Anfrage.</h3>
+        <p>Wir melden uns telefonisch, um deinen Tisch zu bestätigen. Für eine sofortige Reservierung ruf uns gerne an unter <a href="tel:+4922195936466" style="color:var(--accent)">0221 95936466</a>.</p>
+        <button class="btn btn-ghost" data-close style="margin-top:18px">Schließen</button>
+      </div>
+    </div>
+  </div>
+
   <script>
-    const io = new IntersectionObserver((es)=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.14});
+    // reveal on scroll
+    const io = new IntersectionObserver((es)=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.12});
     document.querySelectorAll('.reveal').forEach((el,i)=>{ el.style.transitionDelay=(Math.min(i,4)*70)+'ms'; io.observe(el); });
+
+    // reservation modal (self-contained — no outbound links)
+    const modal=document.getElementById('resModal');
+    const openModal=()=>{ modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; };
+    const closeModal=()=>{ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; };
+    document.querySelectorAll('[data-reserve]').forEach(b=>b.addEventListener('click',openModal));
+    document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',closeModal));
+    document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal(); });
+    document.getElementById('rSubmit').addEventListener('click',()=>{
+      // front-end only for now — captures the enquiry; wired to booking/lead-agent on sign-up
+      document.getElementById('resForm').style.display='none';
+      document.getElementById('resThanks').classList.add('show');
+    });
   </script>
 </body>
 </html>
